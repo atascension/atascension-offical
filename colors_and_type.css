@@ -1,0 +1,75 @@
+/* ============================================================
+   Architech Ascension — Colors & Type Foundations
+   ============================================================ */
+
+@font-face {
+  font-family: 'Quantico';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Quantico-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Lato-Regular.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+:root {
+  --bg:           #080808;
+  --bg-surface:   rgba(255,255,255,0.025);
+  --bg-elevated:  rgba(255,255,255,0.045);
+  --border:       rgba(255,255,255,0.07);
+  --border-gold:  rgba(224,179,68,0.3);
+  --text:         #f5f5f5;
+  --text-muted:   rgba(245,245,245,0.85);
+  --accent:       #e0b344;
+  --accent-dim:   rgba(224,179,68,0.12);
+
+  --fg-1:         var(--text);
+  --fg-2:         var(--text-muted);
+  --fg-on-accent: #080808;
+  --bg-1:         var(--bg);
+  --bg-2:         var(--bg-surface);
+  --bg-3:         var(--bg-elevated);
+  --border-1:     var(--border);
+  --border-2:     var(--border-gold);
+
+  --font-display: 'Quantico', sans-serif;
+  --font-body:    'Lato', system-ui, -apple-system, sans-serif;
+
+  --radius-card:  14px;
+  --radius-pill:  100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+p { color: var(--text-muted); }
+
+a { color: inherit; text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

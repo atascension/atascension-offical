@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Architech Ascension — AI Builders Community Coming Soon</title>
+<link rel="stylesheet" href="flyer.css" />
+</head>
+<body>
+
+  <!-- 8.5 x 11 portrait flyer -->
+  <article class="flyer" data-screen-label="01 Flyer">
+
+    <!-- Background layers -->
+    <div class="dot-grid" aria-hidden="true"></div>
+
+    <!-- Corner brackets -->
+    <span class="corner tl" aria-hidden="true"></span>
+    <span class="corner tr" aria-hidden="true"></span>
+    <span class="corner bl" aria-hidden="true"></span>
+    <span class="corner br" aria-hidden="true"></span>
+
+    <div class="flyer-inner">
+
+      <!-- Top: brand strip -->
+      <header class="brand-strip">
+        <div class="wordmark">
+          <img class="wordmark-mark" src="assets/ArchitechLogo.png" alt="Architech Ascension" />
+        </div>
+        <div class="locality">
+          Jacksonville
+          <span class="dot" aria-hidden="true"></span>
+          FL
+        </div>
+      </header>
+
+      <!-- Center: hero stack -->
+      <main class="center">
+
+        <span class="coming-soon-badge">
+          <span class="pulse" aria-hidden="true"></span>
+          Coming Soon
+        </span>
+
+        <div class="eyebrow-flyer">
+          <span class="bar" aria-hidden="true"></span>
+          The Architech Ascension
+          <span class="bar" aria-hidden="true"></span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="row">AI <span class="accent">Builders</span></span>
+          <span class="row">Community.</span>
+        </h1>
+
+        <p class="hero-sub">
+          For entrepreneurs and creators who are ready to stop sitting on their ideas and start building them with AI.
+        </p>
+
+        <!-- Three pillars -->
+        <div class="pillars">
+          <div class="pillar">
+            <span class="pnum">01</span>
+            <h3 class="ptitle">1-on-1 AI Coaching</h3>
+            <p class="pdesc">Direct work on your specific project, end to end.</p>
+          </div>
+          <div class="pillar featured">
+            <span class="pnum">02</span>
+            <h3 class="ptitle">Live Workshops</h3>
+            <p class="pdesc">Hands-on group build sessions, real outcomes.</p>
+          </div>
+          <div class="pillar">
+            <span class="pnum">03</span>
+            <h3 class="ptitle">Self-Paced Courses</h3>
+            <p class="pdesc">Structured learning that fits your schedule.</p>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Bottom: hand-off / scan-this -->
+      <footer class="flyer-foot">
+
+        <div class="foot-block">
+          <span class="foot-value">atascension<span class="accent">.com</span></span>
+          <span class="foot-label">Stay Tuned</span>
+        </div>
+
+      </footer>
+
+    </div>
+
+  </article>
+
+
+<script>
+(function () {
+  var flyer = document.querySelector('.flyer');
+  function applyScale() {
+    if (window.innerWidth <= 540) {
+      flyer.style.transform = '';
+      flyer.style.marginBottom = '';
+      return;
+    }
+    var s = Math.min(1, (window.innerWidth - 40) / 816);
+    if (s < 1) {
+      flyer.style.transformOrigin = 'top center';
+      flyer.style.transform = 'scale(' + s + ')';
+      /* pull the empty space below the scaled-down flyer back up */
+      flyer.style.marginBottom = (1056 * s - 1056 + 60) + 'px';
+    } else {
+      flyer.style.transform = '';
+      flyer.style.marginBottom = '';
+    }
+  }
+  applyScale();
+  window.addEventListener('resize', applyScale);
+})();
+</script>
+</body>
+</html>
