@@ -378,6 +378,7 @@ body {
   .wordmark-mark {
     width: 120px;
     height: 64px;
+    margin-left: -35px;
   }
 
   .coming-soon-badge {
