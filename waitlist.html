@@ -2,13 +2,93 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Architech Academy - Skoll Community Waitlist</title>
+    <link rel="stylesheet" href="colors_and_type.css" />
     <script async src="https://tally.so/widgets/embed.js"></script>
-    <style type="text/css">
-      html { margin: 0; height: 100%; overflow: hidden; }
-      iframe { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 0; }
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+
+      .site-nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        background: rgba(8,8,8,0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-logo img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        font-family: var(--font-display);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        padding: 7px 14px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: color 0.18s, background 0.18s;
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+        background: rgba(255,255,255,0.06);
+      }
+
+      .nav-links a.active {
+        color: var(--accent);
+      }
+
+      .nav-links a.nav-cta {
+        background: var(--accent);
+        color: #080808;
+        padding: 7px 18px;
+      }
+
+      .nav-links a.nav-cta:hover {
+        background: #f0c55a;
+        color: #080808;
+      }
+
+      iframe {
+        position: absolute;
+        top: 56px; right: 0; bottom: 0; left: 0;
+        border: 0;
+      }
     </style>
   </head>
   <body>
+    <nav class="site-nav">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/ArchitechLogo.png" alt="Architech Ascension" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="waitlist.html" class="active nav-cta">Join Waitlist</a></li>
+      </ul>
+    </nav>
     <iframe data-tally-src="https://tally.so/r/jaGMEY?formEventsForwarding=1" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Architech Academy - Skoll Community Waitlist"></iframe>
   </body>
 </html>

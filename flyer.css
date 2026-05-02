@@ -12,7 +12,73 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 40px 20px 80px;
+  padding: 96px 20px 80px;
+}
+
+/* ===== Navbar ===== */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(8,8,8,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 7px 14px;
+  border-radius: 100px;
+  transition: color 0.18s, background 0.18s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.nav-links a.nav-cta {
+  background: var(--accent);
+  color: #080808;
+  padding: 7px 18px;
+}
+
+.nav-links a.nav-cta:hover {
+  background: #f0c55a;
+  color: #080808;
 }
 
 /* ---- The flyer page ---- */
@@ -345,14 +411,14 @@ body {
 
 /* Tablet: reduce body padding; JS handles transform scale + height compensation */
 @media (max-width: 855px) {
-  body { padding: 20px 0 40px; }
+  body { padding: 76px 0 40px; }
 }
 
 /* Mobile: full reflow below 540px */
 @media (max-width: 540px) {
   body {
     display: block;
-    padding: 0;
+    padding: 56px 0 0;
     background: var(--bg);
   }
 
