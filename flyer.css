@@ -51,6 +51,7 @@ body {
 
 .nav-links a {
   font-family: var(--font-display);
+  font-style: italic;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
