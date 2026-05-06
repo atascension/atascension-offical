@@ -162,7 +162,7 @@ body {
 .brand-strip {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   height: 96px;
 }
@@ -177,7 +177,7 @@ body {
   height: 96px;
   display: block;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
   flex-shrink: 0;
 }
 
@@ -445,7 +445,6 @@ body {
   .wordmark-mark {
     width: 120px;
     height: 64px;
-    margin-left: -35px;
   }
 
   .coming-soon-badge {
